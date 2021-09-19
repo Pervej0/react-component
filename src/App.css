@@ -1,38 +1,132 @@
-.App {
-  text-align: center;
+.btn {
+  padding: 10px 25px;
+  color: #ffffff;
+  border-radius: 10px;
+  background-color: rgb(54, 175, 84);
+  border: 0;
+  font-size: 17px;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.btn2 {
+  padding: 10px 16px;
+  color: #252525;
+  background-color: #ffffff;
+  border: 1px solid #252525;
+  font-size: 15px;
+  border-radius: 5px;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+.topbar {
+  background-color: #252525;
+  color: #ffffff;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.row {
   display: flex;
-  flex-direction: column;
+  justify-content: space-between;
   align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
 }
 
-.App-link {
-  color: #61dafb;
+.jumbotorn-section {
+  padding: 50px 0px;
+  background-color: #cccccc;
+  text-align: left;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
+.jumbotorn-section h1 {
+  font-size: 3.4rem;
+  margin: 0px;
+  padding: 0px;
+}
+
+.confusing-section {
+  padding: 20px;
+}
+
+.confusing-section .row {
+  align-items: baseline;
+  gap: 20px;
+}
+
+.confusing-title p {
+  color: #a53333;
+}
+
+.confusing-title p span {
+  color: #252525;
+}
+
+.items-field {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 0px 20px;
+  padding: 10px;
+}
+
+.items-field .item {
+  max-height: 400px;
+}
+
+.items-field .item h1 {
+  font-size: 1.7rem;
+  color: #127ab6;
+}
+
+.items-field .item h1:hover {
+  text-decoration: underline;
+}
+
+.widget-section {
+  padding: 15px;
+  border: 1px solid rgba(0, 0, 0, 0.4);
+  border-radius: 10px;
+}
+
+footer p {
+  margin: 0px;
+}
+
+@media (max-width: 1024px) {
+  .items-field {
+    grid-template-columns: repeat(2, 1fr);
   }
-  to {
-    transform: rotate(360deg);
+}
+
+@media (max-width: 991px) {
+  .jumbotorn-section h1 {
+    font-size: 3rem;
+  }
+
+  .confusing-section .row {
+    flex-wrap: wrap;
+  }
+}
+
+@media (max-width: 667px) {
+  .jumbotorn-section h1 {
+    font-size: 2rem;
+  }
+
+  .items-field {
+    padding: 0px;
+    grid-template-columns: repeat(1, 1fr);
+  }
+
+  .btn {
+    padding: 8px 15px;
+  }
+}
+
+@media (max-width: 400px) {
+  .topbar {
+    padding-bottom: 10px;
+  }
+  .topbar .row {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  footer p {
+    font-size: 14px;
   }
 }
